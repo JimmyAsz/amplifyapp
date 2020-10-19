@@ -1,18 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import ReactDOM from 'react-dom';
+import Button from '@material-ui/core/Button';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>We now have Auth!</h1>
-      </header>
-      <AmplifySignOut />
-    </div>
-  );
+      <Button variant="contained" color="primary">
+        Hola Mundo!
+      </Button>
+    );
 }
 
-export default withAuthenticator(App);
+ReactDOM.render(<App />, document.querySelector('#app'));
